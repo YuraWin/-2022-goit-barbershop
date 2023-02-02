@@ -1,0 +1,86 @@
+/* Advances  */
+.section--advances {
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0px;
+  }
+}
+
+.advances-list {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+.advances-list__title {
+  color: $secondary-color-text;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  @media screen and (max-width: ($tablet - 1px)) {
+    text-align: center;
+  }
+}
+
+.advances-list__text {
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.advances-list__item {
+  max-width: 450px;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+  @media screen and (min-width: $tablet) {
+    width: 354px;
+    margin: 15px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 270px;
+  }
+  &:not(:last-child) {
+    @media screen and (max-width: ($tablet - 1px)) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &::before {
+    content: '';
+    display: block;
+    max-width: 450px;
+    height: 120px;
+    margin-bottom: 30px;
+    background-color: #f5f4fa;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+
+    @media screen and (min-width: $mobile) {
+      width: 450px;
+    }
+    @media screen and (min-width: $tablet) {
+      width: 354px;
+    }
+    @media screen and (min-width: $desktop) {
+      width: 270px;
+    }
+  }
+
+  &.attention::before {
+    background-image: url(../images/antenna1.svg);
+  }
+  &.punctuality::before {
+    background-image: url(../images/clock1.svg);
+  }
+  &.planning::before {
+    background-image: url(../images/diagram1.svg);
+  }
+  &.modern::before {
+    background-image: url(../images/astronaut1.svg);
+  }
+}

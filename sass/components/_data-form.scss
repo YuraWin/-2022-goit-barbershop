@@ -1,0 +1,183 @@
+/* *********Send Data-form*********** */
+.data-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.data-form__title {
+  display: block;
+  text-align: center;
+  margin-bottom: 30px;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+
+  color: $secondary-color-text;
+
+  @media screen and (min-width: $desktop) {
+    line-height: 1.15;
+  }
+}
+.data-form__form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 28px;
+  /* outline: 1px solid blue; */
+}
+
+.data-form__input {
+  padding: 10px 42px;
+
+  font-size: 16px;
+  line-height: 1.15;
+  letter-spacing: 0.01em;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.data-form__input:focus + svg {
+  fill: $accent-color;
+}
+
+.data-form__icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  fill: black;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-form__label {
+  position: absolute;
+  left: 42px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-form__input:focus ~ .data-form__label,
+.data-form__input:not(:placeholder-shown) ~ .data-form__label {
+  transform: translate(-42px, -35px);
+}
+
+.data-form__form-field-coment {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.data-form__coment {
+  width: 100%;
+  resize: none;
+  padding: 12px 16px;
+
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  border-radius: 4px;
+  outline: none;
+  cursor: pointer;
+
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.data-form__coment:focus + .data-form__coment-label,
+.data-form__coment:not(:placeholder-shown) + .data-form__coment-label {
+  transform: translate(-16px, -37px);
+}
+
+.data-form__coment-label {
+  position: absolute;
+  left: 16px;
+  top: 22px;
+
+  transform: translateY(-50%);
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.data-form__checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.data-form__checkbox:checked + .data-form__icon-check {
+  fill: $accent-color;
+}
+.data-form__checkbox:not(:checked) + .data-form__icon-check {
+  border: 2px solid black;
+  border-radius: 2px;
+  fill: transparent;
+  --color2: transparent;
+}
+.data-form__icon-check {
+  margin-right: 7px;
+}
+
+.data-form__resolution-label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.03em;
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
+}
+.data-form__resolution-link {
+  color: $accent-color;
+  text-decoration: underline;
+}
+
+.data-form__submit {
+  min-width: 200px;
+  min-height: 50px;
+  padding: 10px 52px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  border: 0px;
+  background-color: $accent-color;
+  color: $primary-bg-color;
+}

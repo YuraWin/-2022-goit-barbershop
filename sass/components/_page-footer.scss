@@ -1,0 +1,152 @@
+/***** Footer *****/
+.page-footer {
+  padding: 60px 0;
+  background-color: $secondary-bg-color;
+}
+
+.page-footer__container {
+  display: flex;
+  @media screen and (max-width: ( $tablet - 1px)) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $tablet) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+  @media screen and (min-width: $desktop) {
+    align-items: baseline;
+    flex-wrap: nowrap;
+  }
+}
+
+.page-footer__logobox {
+  @media screen and (max-width: ($desktop - 1px)) {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+.page-footer__social {
+  @media screen and (max-width: ($desktop - 1px)) {
+    margin-bottom: 60px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-left: 70px;
+  }
+}
+
+.page-footer__title {
+  display: block;
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: #ffffff;
+  @media screen and (max-width: ($desktop - 1px)) {
+    text-align: center;
+  }
+}
+
+.page-footer__subscription {
+  width: 100%;
+  @media screen and (min-width: $desktop) {
+    margin-left: 93px;
+  }
+}
+
+.address-footer__location {
+  color: #ffffff;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.address-footer p:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address-footer__mail,
+.address-footer__tel {
+  color: rgba(255, 255, 255, 0.6);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+}
+
+.newsletter {
+  display: flex;
+
+  @media screen and (max-width: ($desktop - 1px)) {
+    flex-direction: column;
+    align-items: center;
+  }
+  @media screen and (min-width: $desktop) {
+  }
+}
+.newsletter__email {
+  padding: 16px 15px;
+  width: 100%;
+  height: 50px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  cursor: pointer;
+
+  @media screen and (min-width: $mobile) {
+    width: 450px;
+  }
+
+  @media screen and (max-width: ($desktop - 1px)) {
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 358px;
+  }
+}
+
+.newsletter__email::placeholder {
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+}
+.newsletter__btn {
+  display: flex;
+  width: 200px;
+  height: 50px;
+  padding: 10px 28px;
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  align-items: center;
+  letter-spacing: 0.06em;
+  color: $primary-bg-color;
+
+  background: $accent-color;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  cursor: pointer;
+}
+.newsletter__icon {
+  margin-left: 10px;
+  fill: $primary-bg-color;
+}

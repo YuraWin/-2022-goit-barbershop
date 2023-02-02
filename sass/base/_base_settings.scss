@@ -1,0 +1,82 @@
+body {
+  background: $primary-bg-color;
+  color: $primary-color-text;
+
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 0.03em;
+}
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  font-family: inherit;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+.section {
+  padding: 60px 0px;
+
+  @media screen and (min-width: $desktop) {
+    padding: 94px 0px;
+  }
+}
+
+.section--team {
+  background-color: #f5f4fa;
+}
+
+.container {
+  margin: 0px auto;
+
+  padding: 0 15px;
+  /* outline: 1px solid tomato; */
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+  }
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+}
+
+.section-title {
+  margin-bottom: 30px;
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+
+  color: $secondary-color-text;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+
+  &--invisible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
