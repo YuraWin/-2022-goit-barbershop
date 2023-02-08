@@ -3,6 +3,7 @@ body {
   color: $primary-color-text;
 
   font-family: 'Open Sans', sans-serif;
+  font-style: normal;
   letter-spacing: 0.02em;
 }
 ul {
@@ -11,6 +12,7 @@ ul {
   padding: 0;
 }
 a {
+  font-family: inherit;
   text-decoration: none;
 }
 button {
