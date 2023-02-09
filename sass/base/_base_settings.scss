@@ -32,20 +32,17 @@ img {
 }
 
 .section {
-  padding: 60px 0px;
-
-  @media screen and (min-width: $desktop) {
-    padding: 94px 0px;
+  padding: 84px 0px;
+  @media screen and (min-width: $tablet) {
+    padding: 100px 0px;
   }
-}
-
-.section--team {
-  background-color: #f5f4fa;
+  @media screen and (min-width: $desktop) {
+    padding: 130px 0px;
+  }
 }
 
 .container {
   margin: 0px auto;
-
   padding: 0 15px;
   /* outline: 1px solid tomato; */
   @media screen and (min-width: $mobile) {
