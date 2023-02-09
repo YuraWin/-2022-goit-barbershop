@@ -4,6 +4,7 @@ body {
 
   font-family: 'Open Sans', sans-serif;
   font-style: normal;
+  font-weight: 400;
   letter-spacing: 0.02em;
 }
 ul {
@@ -55,33 +56,5 @@ img {
   }
   @media screen and (min-width: $desktop) {
     width: $desktop;
-  }
-}
-
-.section-title {
-  margin-bottom: 30px;
-
-  @media screen and (min-width: $desktop) {
-    margin-bottom: 50px;
-  }
-
-  color: $secondary-color-text;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-
-  &--invisible {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    margin: -1px;
-    border: 0;
-    padding: 0;
-
-    white-space: nowrap;
-    clip-path: inset(100%);
-    clip: rect(0 0 0 0);
-    overflow: hidden;
   }
 }

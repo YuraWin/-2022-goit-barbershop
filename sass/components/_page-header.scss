@@ -30,7 +30,7 @@
   width: 160px;
   height: 40px;
   padding: 12px 23px;
-  color: white;
+  color: $secondary-color-text;
   background-color: transparent;
   font-weight: 600;
   font-size: 12px;
@@ -43,6 +43,7 @@
   &:hover,
   &:focus {
     background-color: $accent-color;
+    color: white;
   }
 }
 
@@ -79,11 +80,119 @@
 
 .slider__button {
   width: 60px;
+  padding-bottom: 8px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.1em;
+  text-align: start;
   color: rgba(157, 164, 189, 0.6);
-  background-color: trasparent;
-  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    border-bottom: 1px solid white;
+    color: white;
+  }
+}
+.slider__button--left {
+  text-align: end;
+}
+
+.subtitle {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+
+  color: $secondary-color-text;
+}
+.subtitle--white {
+  color: rgba(157, 164, 189, 0.6);
+}
+
+.section-title {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.67;
+  letter-spacing: 0.05em;
+  color: $secondary-color-text;
+
+  //   @media screen and (min-width: $desktop) {
+  //     margin-bottom: 50px;
+  // }
+  &--invisible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+}
+.section-title--white {
+  color: white;
+}
+
+.title {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+}
+.content {
+  font-size: 14px;
+  line-height: 1.86;
+  letter-spacing: 0.02em;
+}
+.price-list__item {
+  font-size: 18px;
+  line-height: 1.67;
+  letter-spacing: 0.02em;
+  color: $third-color-text;
+}
+
+.advance-list__item {
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.36;
+  color: $secondary-color-text;
+}
+.advance-list__span {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.05em;
+  color: $secondary-color-text;
+}
+.advance-list__plus {
+  font-size: 16px;
+  color: $accent-color;
+  vertical-align: 20px;
+}
+
+.team-list__name {
+  font-size: 18px;
+  line-height: 1.39;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $secondary-color-text;
+}
+
+.team-list__prof {
+  font-size: 14px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.02em;
+  color: $accent-color;
 }
