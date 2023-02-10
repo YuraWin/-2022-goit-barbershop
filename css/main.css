@@ -357,6 +357,12 @@ img {
   letter-spacing: 0.02em;
 }
 
+.foto_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .content {
   font-size: 14px;
   line-height: 1.86;
