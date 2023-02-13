@@ -1,5 +1,39 @@
 /* Header*/
+
+.container.header {
+  display: flex;
+}
+
+.social-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 30px;
+  width: 100px;
+}
+.logo {
+  margin-top: 32px;
+  margin-bottom: 282px;
+}
+.social-list {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  rotate: -180deg;
+  gap: 40px;
+}
+.social-list__item:first-child::before {
+  content: ' ';
+  position: absolute;
+  top: -100px;
+  right: 7px;
+  display: inline-block;
+  width: 1px;
+  height: 60px;
+  background-color: $secondary-color-text;
+}
 .social-list__link {
+  writing-mode: vertical-lr;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -13,6 +47,25 @@
   }
 }
 
+// ************Hero-container*********
+.hero-container {
+  width: 1070px;
+  height: 680px;
+  padding: 40px 0px 40px 40px;
+  background: rgba(25, 28, 38, 0.2);
+}
+
+.header-nav {
+  display: flex;
+  align-items: baseline;
+
+  margin-bottom: 192px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 40px;
+}
 .nav-list__link {
   color: white;
   &:hover,
@@ -21,6 +74,12 @@
   }
 }
 
+.contacts {
+  display: flex;
+  align-items: baseline;
+  gap: 40px;
+  margin-left: auto;
+}
 .header__tel {
   color: white;
 
@@ -53,6 +112,8 @@
 }
 
 .header__text {
+  margin-left: 140px;
+  margin-bottom: 20px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -64,6 +125,8 @@
 }
 
 .header__hero {
+  margin-left: 60px;
+  margin-bottom: 20px;
   font-family: 'Raleway';
   font-style: normal;
   font-weight: 700;
@@ -75,11 +138,18 @@
 }
 
 .header__slogan {
+  margin-left: 60px;
+  margin-bottom: 142px;
   font-weight: 400;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: $third-color-text;
+}
+.header-buttons {
+  display: flex;
+  justify-content: end;
+  gap: 26px;
 }
 
 .slider__button {
@@ -93,6 +163,7 @@
   color: rgba(157, 164, 189, 0.6);
   background-color: transparent;
   border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.6);
   cursor: pointer;
 
   &:hover,
@@ -101,10 +172,11 @@
     color: white;
   }
 }
-.slider__button--left {
+.slider__button--right {
   text-align: end;
 }
 
+// ******** Aboute us *************
 .subtitle {
   font-weight: 600;
   font-size: 11px;
