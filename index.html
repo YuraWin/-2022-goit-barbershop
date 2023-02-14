@@ -15,7 +15,7 @@
     <header>
       <div class="container header">
         <!-- ************Left-link************* -->
-        <div class="social-container tomline">
+        <div class="social-container">
           <img class="logo" src="./img/Logo.svg" alt="Логотип" width="69" height="56" />
           <ul class="social-list">
             <li class="social-list__item">
@@ -27,7 +27,7 @@
           </ul>
         </div>
         <!-- ************Hero-container********* -->
-        <div class="hero-container tomline">
+        <div class="hero-container">
           <div class="header-nav">
             <nav>
               <ul class="nav-list">
@@ -95,7 +95,7 @@
               клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити кожного, хто до нас
               приходить!
             </p>
-            <a class="button" href="./">онлайн-запис</a>
+            <a class="button button--black " href="./">онлайн-запис</a>
           </div>
         </div>
       </section>
@@ -108,22 +108,58 @@
           <h2 class="section-title section-title--white section-price__section-title">
             Послуги та ціни
           </h2>
-          <ul class="price-list">
-            <li class="price-list__item">Чоловіча стрижка от 300 грн.</li>
-            <li class="price-list__item">Стрижка бороди от 200 грн.</li>
-            <li class="price-list__item">Стрижка усів от 200 грн.</li>
-            <li class="price-list__item">Бриття небезпечною бритвою от 200 грн.</li>
-            <li class="price-list__item">Cтрижка у стажера от 50 грн.</li>
-            <li class="price-list__item">Стрижка під насадку от 200 грн.</li>
-            <li class="price-list__item">Дитяча стрижка (до 12 лет) от 300 грн.</li>
-            <li class="price-list__item">Камуфлювання седини от 200 грн.</li>
-          </ul>
-          <a class="button" href="./">онлайн-запис</a>
+          <div class="price">
+            <ul class="price-list">
+              <li class="price-list__item">
+                Чоловіча стрижка&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 300 грн.
+              </li>
+              <li class="price-list__item">
+                Стрижка бороди&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 200 грн.
+              </li>
+              <li class="price-list__item">
+                Стрижка вус&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 200 грн.
+              </li>
+              <li class="price-list__item">
+                Бриття небезпечною бритвою&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 200 грн.
+              </li>
+            </ul>
+            <ul class="price-list price-list--second">
+              <li class="price-list__item">
+                Cтрижка у стажера&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 50 грн.
+              </li>
+              <li class="price-list__item">
+                Стрижка під насадку&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 200 грн.
+              </li>
+              <li class="price-list__item">
+                Дитяча стрижка (до 12 років)&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 300 грн.
+              </li>
+              <li class="price-list__item">
+                Камуфлювання седини&nbsp;
+                <hr class="price-list__line" />
+                &nbsp;від 200 грн.
+              </li>
+            </ul>
+          </div>
+          <a class="button section-price__button" href="./">онлайн-запис</a>
         </div>
       </section>
       <!-- *************** Why choice us******************** -->
       <section class="section">
-        <div class="container">
+        <div class="container container-advance">
           <ul class="advance-list">
             <li class="advance-list__item">
               <span class="advance-list__span"
@@ -135,7 +171,7 @@
               <span class="advance-list__span"
                 >20<span class="advance-list__plus">&plus;</span></span
               >
-              Кращіх майстрів Київу
+              Кращіх майстрів Києву
             </li>
             <li class="advance-list__item">
               <span class="advance-list__span"
@@ -150,19 +186,24 @@
               Подарунків постійним клієнтам
             </li>
           </ul>
-          <p class="subtitle">стара традиційна школа</p>
-          <h2 class="section-title">Чому приходять саме до нас?</h2>
-          <p class="title">
-            Про на говорять тільки позитивне. Але краще 1 раз <br />
-            побачити і відчути, ніж 10 раз прочитати.
-          </p>
+          <div class="advance-content">
+            <p class="subtitle advance-content__subtitle">стара традиційна школа</p>
+            <h2 class="section-title advance-content__section-title">
+              Чому приходять<br />
+              саме до нас?
+            </h2>
+            <p class="title">
+              Про на говорять тільки позитивне. Але краще 1 раз <br />
+              побачити і відчути, ніж 10 раз прочитати.
+            </p>
+          </div>
         </div>
       </section>
       <!-- **************Our masters********************** -->
-      <section class="section">
+      <section class="section section-masters">
         <div class="container">
-          <p class="subtitle">для справжніх поціновувачів атмосфери</p>
-          <h2 class="section-title">Наші майстри</h2>
+          <p class="subtitle team-subtitle">для справжніх поціновувачів атмосфери</p>
+          <h2 class="section-title team-section-title">Наші майстри</h2>
           <ul class="team-list">
             <li class="team-list__item">
               <img class="team-list__foto" src="./img/m1.jpg" alt="" width="370" height="346" />
@@ -202,14 +243,24 @@
       </section>
       <!-- ****************Our works***************************** -->
       <section class="section">
-        <p class="subtitle">На латинській мові “барба” це “борода”</p>
-        <h2 class="section-title section-title--invisible">Наша праця</h2>
-        <ul>
-          <li><img src="./img/w1.jpg" alt="" width="270" height="360" /></li>
-          <li><img src="./img/w2.jpg" alt="" width="270" height="360" /></li>
-          <li><img src="./img/w3.jpg" alt="" width="270" height="360" /></li>
-          <li><img src="./img/w4.jpg" alt="" width="270" height="360" /></li>
-        </ul>
+        <div class="container">
+          <p class="subtitle works-subtitle">На латинській мові “барба” це “борода”</p>
+          <h2 class="section-title section-title--invisible">Наша праця</h2>
+          <ul class="team-list">
+            <li class="team-list__item">
+              <img src="./img/w1.jpg" alt="" width="270" height="360" />
+            </li>
+            <li class="team-list__item">
+              <img src="./img/w2.jpg" alt="" width="270" height="360" />
+            </li>
+            <li class="team-list__item">
+              <img src="./img/w3.jpg" alt="" width="270" height="360" />
+            </li>
+            <li class="team-list__item">
+              <img src="./img/w4.jpg" alt="" width="270" height="360" />
+            </li>
+          </ul>
+        </div class="container">
       </section>
     </main>
     <footer>
@@ -220,6 +271,7 @@
           <input type="text" />
           <input type="text" />
           <input type="text" />
+        
         </form>
       </section>
 

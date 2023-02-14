@@ -337,7 +337,7 @@ img {
   width: 160px;
   height: 40px;
   padding: 12px 23px;
-  color: #303030;
+  color: white;
   background-color: transparent;
   font-weight: 600;
   font-size: 12px;
@@ -349,6 +349,12 @@ img {
 }
 .button:hover, .button:focus {
   background-color: #ff6c00;
+}
+
+.button--black {
+  color: #303030;
+}
+.button--black:hover, .button--black:focus {
   color: white;
 }
 
@@ -511,6 +517,8 @@ img {
 }
 
 .section-price {
+  margin-left: auto;
+  margin-right: auto;
   background-image: url(/img/bgprice.png);
   background-color: #111319;
   background-position: center;
@@ -529,21 +537,90 @@ img {
   margin-bottom: 40px;
 }
 
+.price {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.price-list {
+  width: 585px;
+  height: 240px;
+  padding: 30px 40px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+}
+
+.price-list--second {
+  background: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+}
+
 .price-list__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   font-size: 18px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+.price-list__item + .price-list__item {
+  margin-top: 20px;
+}
+
+.price-list__line {
+  display: inline-block;
+  -webkit-box-flex: 2;
+      -ms-flex-positive: 2;
+          flex-grow: 2;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  margin-bottom: 5px;
+  border-color: rgba(157, 164, 189, 0.12);
+}
+
+.section-price__button {
+  margin: 0 auto;
+}
+
+.container-advance {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 130px;
+}
+
+.advance-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
+  margin-left: 100px;
+  width: 370px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
 
 .advance-list__item {
+  width: 170px;
+  height: 133px;
+  padding: 20px 24px;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
+  text-align: center;
   color: #303030;
+  background-color: #f7f7f7;
+}
+.advance-list__item:nth-child(2n) {
+  position: relative;
+  top: 35px;
 }
 
 .advance-list__span {
+  display: block;
   font-weight: 700;
   font-size: 42px;
   line-height: 1.36;
@@ -556,6 +633,37 @@ img {
   font-size: 16px;
   color: #ff6c00;
   vertical-align: 20px;
+}
+
+.advance-content__subtitle {
+  margin-left: 80px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.advance-content__section-title {
+  margin-bottom: 20px;
+}
+
+.section-masters {
+  background-color: #f7f7f7;
+}
+
+.team-subtitle {
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 20px;
+}
+
+.team-section-title {
+  margin-bottom: 44px;
+}
+
+.team-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 30px;
 }
 
 .team-list__name {
@@ -572,6 +680,12 @@ img {
   text-align: center;
   letter-spacing: 0.02em;
   color: #ff6c00;
+}
+
+.works-subtitle {
+  position: relative;
+  margin-left: 80px;
+  margin-bottom: 20px;
 }
 
 footer {
