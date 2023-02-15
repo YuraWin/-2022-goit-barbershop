@@ -280,38 +280,44 @@
           <!-- **********************Online entry********************* -->
           <form class="data-form" autocomplete="off">
             <h2 class="section-title section-title--white">Онлайн-запис</h2>
-            <input
-              class="data-form__input"
-              type="text"
-              name="name"
-              id="data-form__name"
-              placeholder=" "
-            />
-            <label class="data-form__label" for="data-form__name">Ім’я</label>
-            <input
-              class="data-form__input"
-              type="tel"
-              name="tel"
-              id="data-form__tel"
-              placeholder=" "
-            />
-            <label class="data-form__label" for="data-form__tel">Телефон</label>
-
-            <textarea
-            class="data-form__input"
-              type="text"
-              name="name"
-              id="data-form__name"
-              placeholder=" ">
-              
-           </textarea>
-          
-
+            <div class="data-form__form-field">
+              <input
+                class="data-form__input"
+                type="text"
+                name="name"
+                id="data-form__name"
+                placeholder=" "
+              />
+              <label class="data-form__label" for="data-form__name">Ім’я</label>
+            </div>
+            <div class="data-form__form-field">
+              <input
+                class="data-form__input"
+                type="tel"
+                name="tel"
+                id="data-form__tel"
+                placeholder=" "
+              />
+              <label class="data-form__label" for="data-form__tel">Телефон</label>
+            </div>
+            <div class="data-form__form-field-message">
+              <textarea
+                class="data-form__message"
+                name="message"
+                id="message"
+                cols="30"
+                rows="2"
+                placeholder=" "
+              ></textarea>
+              <label class="data-form__message-label" for="message">Повідомлення</label>
+            </div>
+            <button class="button" type="submit">Відправити</button>
+          </form>
           <!-- **********************Data contacts************************ -->
           <div class="data-location">
             <h2 class="section-title section-title--white">Контакти</h2>
             <address class="address">
-              <a class="address__item" href="http://"
+              <a class="address__item" href="./"
                 >ул. Васильковая, 7А <br />
                 Киев, 08132</a
               >
