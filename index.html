@@ -17,12 +17,22 @@
         <!-- ************Left-link************* -->
         <div class="social-container">
           <img class="logo" src="./img/Logo.svg" alt="Логотип" width="69" height="56" />
-          <ul class="social-list">
-            <li class="social-list__item">
-              <a class="social-list__link" href="./" aria-label="Ссилка на Instagram">Instagram</a>
+          <ul class="social-list social-list--vertical">
+            <li class="social-list__item social-list__item--vertical">
+              <a
+                class="social-list__link social-list__link--vertical"
+                href="./"
+                aria-label="Ссилка на Instagram"
+                >Instagram</a
+              >
             </li>
-            <li class="social-list__item">
-              <a class="social-list__link" href="./" aria-label="Ссилка на Youtube">Youtube</a>
+            <li class="social-list__item social-list__item--vertical">
+              <a
+                class="social-list__link social-list__link--vertical"
+                href="./"
+                aria-label="Ссилка на Youtube"
+                >Youtube</a
+              >
             </li>
           </ul>
         </div>
@@ -95,7 +105,7 @@
               клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити кожного, хто до нас
               приходить!
             </p>
-            <a class="button button--black " href="./">онлайн-запис</a>
+            <a class="button button--black" href="./">онлайн-запис</a>
           </div>
         </div>
       </section>
@@ -246,55 +256,86 @@
         <div class="container">
           <p class="subtitle works-subtitle">На латинській мові “барба” це “борода”</p>
           <h2 class="section-title section-title--invisible">Наша праця</h2>
-          <ul class="team-list">
-            <li class="team-list__item">
+          <ul class="work-list">
+            <li class="work-list__item">
               <img src="./img/w1.jpg" alt="" width="270" height="360" />
             </li>
-            <li class="team-list__item">
+            <li class="work-list__item">
               <img src="./img/w2.jpg" alt="" width="270" height="360" />
             </li>
-            <li class="team-list__item">
+            <li class="work-list__item">
               <img src="./img/w3.jpg" alt="" width="270" height="360" />
             </li>
-            <li class="team-list__item">
+            <li class="work-list__item">
               <img src="./img/w4.jpg" alt="" width="270" height="360" />
             </li>
           </ul>
-        </div class="container">
+        </div>
       </section>
     </main>
-    <footer>
-      <!-- **********************Data contacts************************ -->
-      <section class="section">
-        <form action="">
-          <h2 class="section-title section-title--white">Онлайн-запис</h2>
-          <input type="text" />
-          <input type="text" />
-          <input type="text" />
-        
-        </form>
-      </section>
 
-      <section>
-        <h2 class="section-title section-title--white">Контакти</h2>
-        <address class="address">
-          <a class="address__item" href="http://"
-            >ул. Васильковая, 7А <br />
-            Киев, 08132</a
-          >
-          <a class="address__item" href="tel:+380441111111">+38 044 111 11 11</a>
-          <a class="address__item" href="mailto:barbershop@email.com">barbershop@email.com</a>
-        </address>
-        <b class="subtitle subtitle--white">Час роботи</b>
-        <p class="timetable">Щоденно з 9:00 до 22:00</p>
-      </section>
-      <p class="copyright">&copy; Copyright 2020</p>
-      <ul class="social-list">
-        <li>
-          <a class="social-list__link" href="./" aria-label="Ссилка на Instagram">Instagram</a>
-        </li>
-        <li><a class="social-list__link" href="./" aria-label="Ссилка на Youtube">Youtube</a></li>
-      </ul>
+    <footer>
+      <div class="section">
+        <div class="container">
+          <!-- **********************Online entry********************* -->
+          <form class="data-form" autocomplete="off">
+            <h2 class="section-title section-title--white">Онлайн-запис</h2>
+            <input
+              class="data-form__input"
+              type="text"
+              name="name"
+              id="data-form__name"
+              placeholder=" "
+            />
+            <label class="data-form__label" for="data-form__name">Ім’я</label>
+            <input
+              class="data-form__input"
+              type="tel"
+              name="tel"
+              id="data-form__tel"
+              placeholder=" "
+            />
+            <label class="data-form__label" for="data-form__tel">Телефон</label>
+
+            <textarea
+            class="data-form__input"
+              type="text"
+              name="name"
+              id="data-form__name"
+              placeholder=" ">
+              
+           </textarea>
+          
+
+          <!-- **********************Data contacts************************ -->
+          <div class="data-location">
+            <h2 class="section-title section-title--white">Контакти</h2>
+            <address class="address">
+              <a class="address__item" href="http://"
+                >ул. Васильковая, 7А <br />
+                Киев, 08132</a
+              >
+              <a class="address__item" href="tel:+380441111111">+38 044 111 11 11</a>
+              <a class="address__item" href="mailto:barbershop@email.com">barbershop@email.com</a>
+            </address>
+            <b class="subtitle subtitle--white">Час роботи</b>
+            <p class="timetable">Щоденно з 9:00 до 22:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-line">
+        <div class="container bottom-line__container">
+          <p class="copyright">&copy; Copyright 2020</p>
+          <ul class="social-list footer-social-list">
+            <li class="social-list__item footer-social-list__item">
+              <a class="social-list__link" href="./" aria-label="Ссилка на Instagram">Instagram</a>
+            </li>
+            <li class="social-list__item footer-social-list__item">
+              <a class="social-list__link" href="./" aria-label="Ссилка на Youtube">Youtube</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </footer>
   </body>
 </html>

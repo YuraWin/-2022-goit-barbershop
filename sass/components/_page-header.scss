@@ -18,22 +18,25 @@
 .social-list {
   position: relative;
   display: flex;
+  gap: 40px;
+}
+.social-list--vertical {
   flex-direction: column;
   rotate: -180deg;
-  gap: 40px;
 }
 .social-list__item:first-child::before {
   content: ' ';
   position: absolute;
-  top: -100px;
-  right: 7px;
   display: inline-block;
-  width: 1px;
-  height: 60px;
   background-color: $secondary-color-text;
 }
+.social-list__item--vertical:first-child::before {
+  width: 1px;
+  height: 60px;
+  right: 7px;
+  top: -100px;
+}
 .social-list__link {
-  writing-mode: vertical-lr;
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
@@ -45,6 +48,9 @@
   &:focus {
     color: $accent-color;
   }
+}
+.social-list__link--vertical {
+  writing-mode: vertical-lr;
 }
 
 // ************Hero-container*********
@@ -421,6 +427,11 @@
   margin-left: 80px;
   margin-bottom: 20px;
 }
+.work-list {
+  display: flex;
+  gap: 30px;
+}
+// *************Footer*****************
 
 footer {
   background-color: $secondary-bg-color;
@@ -440,11 +451,26 @@ footer {
   letter-spacing: 0.02em;
   color: $third-color-text;
 }
-
+.bottom-line {
+  background-color: #fff;
+  padding: 56px 0;
+}
+.bottom-line__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 .copyright {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: $third-color-text;
+}
+
+.footer-social-list__item:first-child::before {
+  top: 10px;
+  left: -100px;
+  width: 60px;
+  height: 1px;
 }
