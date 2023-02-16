@@ -49,7 +49,7 @@
             </nav>
             <div class="contacts">
               <a class="header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
-              <a class="button" href="./">онлайн-запис</a>
+              <a class="button" href="#online-entry">онлайн-запис</a>
             </div>
           </div>
           <p class="subtitle subtitle--grey header__subtitle">A hair salon for men in Kyiv</p>
@@ -105,7 +105,7 @@
               клієнтами "на одній хвилі". Тому ми завжди готові вдосконалити кожного, хто до нас
               приходить!
             </p>
-            <a class="button button--black" href="./">онлайн-запис</a>
+            <a class="button button--black" href="#online-entry">онлайн-запис</a>
           </div>
         </div>
       </section>
@@ -164,7 +164,7 @@
               </li>
             </ul>
           </div>
-          <a class="button section-price__button" href="./">онлайн-запис</a>
+          <a class="button section-price__button" href="#online-entry">онлайн-запис</a>
         </div>
       </section>
       <!-- *************** Why choice us******************** -->
@@ -276,9 +276,9 @@
 
     <footer>
       <div class="section">
-        <div class="container">
+        <div class="container footer-container">
           <!-- **********************Online entry********************* -->
-          <form class="data-form" autocomplete="off">
+          <form id="online-entry" class="data-form" autocomplete="off">
             <h2 class="section-title section-title--white">Онлайн-запис</h2>
             <div class="data-form__form-field">
               <input
@@ -288,7 +288,7 @@
                 id="data-form__name"
                 placeholder=" "
               />
-              <label class="data-form__label" for="data-form__name">Ім’я</label>
+              <label class="data-form__label" for="data-form__name">Ім’я*</label>
             </div>
             <div class="data-form__form-field">
               <input
@@ -298,9 +298,10 @@
                 id="data-form__tel"
                 placeholder=" "
               />
-              <label class="data-form__label" for="data-form__tel">Телефон</label>
+              <label class="data-form__label" for="data-form__tel">Телефон*</label>
             </div>
             <div class="data-form__form-field-message">
+              <label class="data-form__message-label" for="message">Повідомлення</label>
               <textarea
                 class="data-form__message"
                 name="message"
@@ -309,22 +310,34 @@
                 rows="2"
                 placeholder=" "
               ></textarea>
-              <label class="data-form__message-label" for="message">Повідомлення</label>
             </div>
             <button class="button" type="submit">Відправити</button>
           </form>
-          <!-- **********************Data contacts************************ -->
+          <!-- **********************Data locations************************ -->
           <div class="data-location">
             <h2 class="section-title section-title--white">Контакти</h2>
             <address class="address">
               <a class="address__item" href="./"
-                >ул. Васильковая, 7А <br />
-                Киев, 08132</a
-              >
-              <a class="address__item" href="tel:+380441111111">+38 044 111 11 11</a>
-              <a class="address__item" href="mailto:barbershop@email.com">barbershop@email.com</a>
+                ><svg class="address__icon" width="24" height="24">
+                  <use href="./img/symbol-defs.svg#icon-map-pin"></use>
+                </svg>
+                ул. Васильковая, 7А <br />
+                Киев, 08132
+              </a>
+              <a class="address__item" href="tel:+380441111111"
+                ><svg class="address__icon" width="24" height="24">
+                  <use href="./img/symbol-defs.svg#icon-phone"></use>
+                </svg>
+                +38 044 111 11 11
+              </a>
+              <a class="address__item" href="mailto:barbershop@email.com"
+                ><svg class="address__icon" width="24" height="24">
+                  <use href="./img/symbol-defs.svg#icon-mail"></use>
+                </svg>
+                barbershop@email.com
+              </a>
             </address>
-            <b class="subtitle subtitle--white">Час роботи</b>
+            <b class="subtitle subtitle--white address__subtitle">Час роботи</b>
             <p class="timetable">Щоденно з 9:00 до 22:00</p>
           </div>
         </div>
