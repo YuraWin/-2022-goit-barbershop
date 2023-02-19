@@ -548,12 +548,37 @@ img {
 .section-price {
   margin-left: auto;
   margin-right: auto;
-  background-image: url(/img/bgprice.png);
+  height: 826px;
   background-color: #111319;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  max-width: 1280px;
+}
+@media screen and (max-width: 448px) {
+  .section-price {
+    max-width: 448px;
+    background-image: url(../img/bgprice-480.png);
+    background-image: -webkit-image-set(url(../img/bgprice-480.png) 1x, url(../img/bgprice-480@2x.png) 2x);
+    background-image: image-set(url(../img/bgprice-480.png) 1x, url(../img/bgprice-480@2x.png) 2x);
+  }
+}
+@media screen and (min-width: 449px) and (max-width: 720px) {
+  .section-price {
+    height: 858px;
+    max-width: 768px;
+    background-image: url(../img/bgprice-768.png);
+    background-image: -webkit-image-set(url(../img/bgprice-768.png) 1x, url(../img/bgprice-768@2x.png) 2x);
+    background-image: image-set(url(../img/bgprice-768.png) 1x, url(../img/bgprice-768@2x.png) 2x);
+  }
+}
+@media screen and (min-width: 721px) {
+  .section-price {
+    height: 718px;
+    max-width: 1280px;
+    background-image: url(../img/bgprice-1280.png);
+    background-image: -webkit-image-set(url(../img/bgprice-1280.png) 1x, url(../img/bgprice-1280@2x.png) 2x);
+    background-image: image-set(url(../img/bgprice-1280.png) 1x, url(../img/bgprice-1280@2x.png) 2x);
+  }
 }
 
 .section-price__subtitle {
@@ -780,10 +805,30 @@ footer {
 }
 
 .footer-section {
-  background-image: url(../img/bgfooter.png);
   background-size: contain;
   background-repeat: no-repeat;
-  background-position: 51vw;
+}
+@media screen and (max-width: 719px) {
+  .footer-section {
+    background-image: url(../img/bgfooter-480.png);
+    background-image: -webkit-image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
+    background-image: image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
+  }
+}
+@media screen and (min-width: 720px) {
+  .footer-section {
+    background-image: url(../img/bgfooter-768.png);
+    background-image: -webkit-image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
+    background-image: image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-section {
+    background-position: 51vw;
+    background-image: url(../img/bgfooter-625.png);
+    background-image: -webkit-image-set(url(../img/bgfooter-625.png) 1x, url(../img/bgfooter-625@2x.png) 2x);
+    background-image: image-set(url(../img/bgfooter-625.png) 1x, url(../img/bgfooter-625@2x.png) 2x);
+  }
 }
 
 .footer-container {

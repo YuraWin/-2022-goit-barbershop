@@ -38,7 +38,24 @@
         </div>
         <!-- ************Hero-container********* -->
         <div class="hero-container">
-          <img class="slider" src="./img/slider1.jpg" alt="BarberShop" />
+          <picture>
+            <source
+              srcset="./img/slider1-1125.jpg 1125w, ./img/slider1-1125@2x.jpg 2250w"
+              media="(min-width:720px)"
+              sizes="(min-width:720px) 1125px"
+            />
+            <source
+              srcset="./img/slider1-609.jpg 609w, ./img/slider1-609@2x.jpg 1218w"
+              media="(min-width:481px) and (max-width:719px)"
+              sizes="(min-width:481px) 609px"
+            />
+            <source
+              srcset="./img/slider1-480.jpg 480w, ./img/slider1-480@2x.jpg 960w"
+              media="(max-width:480px)"
+              sizes="(max-width:480) 480px"
+            />
+            <img class="slider" src="./img/slider1-1125.jpg" alt="BarberShop" />
+          </picture>
           <div class="header-nav">
             <nav>
               <ul class="nav-list">
@@ -74,16 +91,28 @@
             <li class="foto_block__item">
               <img
                 class="foto_block__image"
-                src="./img/bb1.jpg"
+                srcset="
+                  ./img/bb1-270.jpg    270w,
+                  ./img/bb1-270@2x.jpg 540w,
+                  ./img/bb1-330.jpg    330w,
+                  ./img/bb1-330@2x.jpg 660w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:720px) 330px"
+                src="./img/bb1-270.jpg"
                 alt="Стрижка бороди"
-                width="270"
-                height="445"
               />
             </li>
             <li class="foto_block__item">
               <img
                 class="foto_block__image"
-                src="./img/bb2.jpg"
+                srcset="
+                  ./img/bb2-270.jpg    270w,
+                  ./img/bb2-270@2x.jpg 540w,
+                  ./img/bb2-330.jpg    330w,
+                  ./img/bb2-330@2x.jpg 660w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:720px) 330px"
+                src="./img/bb2-270.jpg"
                 alt="Гоління"
                 width="270"
                 height="445"
@@ -219,10 +248,17 @@
             <li class="team-list__item">
               <img
                 class="team-list__foto"
-                src="./img/m1.jpg"
+                srcset="
+                  ./img/m1-370.jpg    370w,
+                  ./img/m1-370@2x.jpg 740w,
+                  ./img/m1-450.jpg    450w,
+                  ./img/m1-450@2x.jpg 900w,
+                  ./img/m1-418.jpg    418w,
+                  ./img/m1-418@2x.jpg 836w
+                "
+                sizes="(min-width:1200px) 370px, (min-width:720px) 450px, (min-width:448px) 418px, 100vw"
+                src="./img/m1-370.jpg"
                 alt="John Smith"
-                width="370"
-                height="346"
               />
               <h3 class="team-list__name">John Smith</h3>
               <p class="team-list__prof">Extreme Barber</p>
@@ -256,10 +292,17 @@
             <li class="team-list__item">
               <img
                 class="team-list__foto"
-                src="./img/m2.jpg"
+                srcset="
+                  ./img/m2-370.jpg    370w,
+                  ./img/m2-370@2x.jpg 740w,
+                  ./img/m2-450.jpg    450w,
+                  ./img/m2-450@2x.jpg 900w,
+                  ./img/m2-418.jpg    418w,
+                  ./img/m2-418@2x.jpg 836w
+                "
+                sizes="(min-width:1200px) 370px, (min-width:720px) 450px, (min-width:448px) 418px, 100vw"
+                src="./img/m2-370.jpg"
                 alt="Michele Doe"
-                width="370"
-                height="346"
               />
               <h3 class="team-list__name">Michele Doe</h3>
               <p class="team-list__prof">Extreme Barber</p>
@@ -293,10 +336,17 @@
             <li class="team-list__item">
               <img
                 class="team-list__foto"
-                src="./img/m3.jpg"
+                srcset="
+                  ./img/m3-370.jpg    370w,
+                  ./img/m3-370@2x.jpg 740w,
+                  ./img/m3-450.jpg    450w,
+                  ./img/m3-450@2x.jpg 900w,
+                  ./img/m3-418.jpg    418w,
+                  ./img/m3-418@2x.jpg 836w
+                "
+                sizes="(min-width:1200px) 370px, (min-width:720px) 450px, (min-width:448px) 418px, 100vw"
+                src="./img/m3-370.jpg"
                 alt="Alan Black"
-                width="370"
-                height="346"
               />
               <h3 class="team-list__name">Alan Black</h3>
               <p class="team-list__prof">Extreme Barber</p>
@@ -337,16 +387,84 @@
           <h2 class="section-title section-title--invisible">Наша праця</h2>
           <ul class="work-list">
             <li class="work-list__item">
-              <img src="./img/w1.jpg" alt="Стрижка" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="./img/w1-270.jpg 270w, ./img/w1-270@2x.jpg 540w"
+                  media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 270px"
+                />
+                <source
+                  srcset="./img/w1-330.jpg 330w, ./img/w1-330@2x.jpg 660w"
+                  media="(min-width:720px) and (max-width:1199px)"
+                  sizes="(min-width:720px) 330px"
+                />
+                <source
+                  srcset="./img/w1-418.jpg 418w, ./img/w1-418@2x.jpg 836w"
+                  media="(max-width:719px)"
+                  sizes="(min-width:419px) and (max-width:719px) 418px, 100vw"
+                />
+                <img src="./img/w1-270.jpg" alt="Стрижка" />
+              </picture>
             </li>
             <li class="work-list__item">
-              <img src="./img/w2.jpg" alt="Гоління" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="./img/w2-270.jpg 270w, ./img/w2-270@2x.jpg 540w"
+                  media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 270px"
+                />
+                <source
+                  srcset="./img/w2-330.jpg 330w, ./img/w2-330@2x.jpg 660w"
+                  media="(min-width:720px) and (max-width:1199px)"
+                  sizes="(min-width:720px) 330px"
+                />
+                <source
+                  srcset="./img/w2-418.jpg 418w, ./img/w2-418@2x.jpg 836w"
+                  media="(max-width:719px)"
+                  sizes="(min-width:419px) and (max-width:719px) 418px, 100vw"
+                />
+                <img src="./img/w2-270.jpg" alt="Гоління" />
+              </picture>
             </li>
             <li class="work-list__item">
-              <img src="./img/w3.jpg" alt="Стрижка бороди" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="./img/w3-270.jpg 270w, ./img/w3-270@2x.jpg 540w"
+                  media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 270px"
+                />
+                <source
+                  srcset="./img/w3-330.jpg 330w, ./img/w3-330@2x.jpg 660w"
+                  media="(min-width:720px) and (max-width:1199px)"
+                  sizes="(min-width:720px) 330px"
+                />
+                <source
+                  srcset="./img/w3-418.jpg 418w, ./img/w3-418@2x.jpg 836w"
+                  media="(max-width:719px)"
+                  sizes="(min-width:419px) and (max-width:719px) 418px, 100vw"
+                />
+                <img src="./img/w3-270.jpg" alt="Стрижка бороди" />
+              </picture>
             </li>
             <li class="work-list__item">
-              <img src="./img/w4.jpg" alt="Корекція" width="270" height="360" />
+              <picture>
+                <source
+                  srcset="./img/w4-270.jpg 270w, ./img/w4-270@2x.jpg 540w"
+                  media="(min-width:1200px)"
+                  sizes="(min-width:1200px) 270px"
+                />
+                <source
+                  srcset="./img/w4-330.jpg 330w, ./img/w4-330@2x.jpg 660w"
+                  media="(min-width:720px) and (max-width:1199px)"
+                  sizes="(min-width:720px) 330px"
+                />
+                <source
+                  srcset="./img/w4-418.jpg 418w, ./img/w4-418@2x.jpg 836w"
+                  media="(max-width:719px)"
+                  sizes="(min-width:419px) and (max-width:719px) 418px, 100vw"
+                />
+                <img src="./img/w4-270.jpg" alt="Корекція" />
+              </picture>
             </li>
           </ul>
         </div>
