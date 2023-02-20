@@ -492,7 +492,7 @@
   margin-left: 80px;
   margin-bottom: 20px;
 }
-.team-section-title {
+.section-title--margin {
   margin-bottom: 44px;
 }
 
@@ -613,6 +613,11 @@ footer {
 }
 .data-form {
   width: 100%;
+  margin-bottom: 168px;
+
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    margin-bottom: 200px;
+  }
   @media screen and (min-width: $desktop) {
     width: 560px;
   }
@@ -704,6 +709,11 @@ footer {
   &:hover,
   &:focus {
     color: white;
+  }
+}
+.data-form__button {
+  @media screen and (max-width: calc($tablet - 1px)) {
+    margin: 0 auto;
   }
 }
 

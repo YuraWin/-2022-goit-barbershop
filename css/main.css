@@ -809,7 +809,7 @@ img {
   margin-bottom: 20px;
 }
 
-.team-section-title {
+.section-title--margin {
   margin-bottom: 44px;
 }
 
@@ -972,6 +972,12 @@ footer {
 
 .data-form {
   width: 100%;
+  margin-bottom: 168px;
+}
+@media screen and (min-width: 720px) and (max-width: 1199px) {
+  .data-form {
+    margin-bottom: 200px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .data-form {
@@ -1074,6 +1080,12 @@ footer {
 }
 .data-form__message-label:hover, .data-form__message-label:focus {
   color: white;
+}
+
+@media screen and (max-width: 719px) {
+  .data-form__button {
+    margin: 0 auto;
+  }
 }
 
 @media screen and (max-width: 1199px) {
