@@ -194,7 +194,6 @@ img {
 .container {
   margin: 0px auto;
   padding: 0 15px;
-  /* outline: 1px solid tomato; */
 }
 @media screen and (min-width: 448px) {
   .container {
@@ -480,11 +479,32 @@ img {
   gap: 64px;
 }
 
-.foto_block {
+.foto-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+}
+@media screen and (max-width: 719px) {
+  .foto-block {
+    display: none;
+  }
+}
+@media screen and (min-width: 720px) {
+  .foto-block {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .foto-block {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
 .aboute__subtitle {
@@ -502,6 +522,11 @@ img {
   line-height: 1.17;
   letter-spacing: 0.05em;
   color: #303030;
+}
+@media screen and (max-width: 1199px) {
+  .section-title--small {
+    font-size: 23px;
+  }
 }
 .section-title--invisible {
   position: absolute;
@@ -523,9 +548,15 @@ img {
 
 .title {
   margin-bottom: 20px;
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 16px;
+  line-height: 1.62;
   letter-spacing: 0.02em;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 
 .content {
@@ -548,7 +579,6 @@ img {
 .section-price {
   margin-left: auto;
   margin-right: auto;
-  height: 826px;
   background-color: #111319;
   background-position: center;
   background-size: cover;
@@ -564,7 +594,6 @@ img {
 }
 @media screen and (min-width: 449px) and (max-width: 720px) {
   .section-price {
-    height: 858px;
     max-width: 768px;
     background-image: url(../img/bgprice-768.png);
     background-image: -webkit-image-set(url(../img/bgprice-768.png) 1x, url(../img/bgprice-768@2x.png) 2x);
@@ -573,7 +602,6 @@ img {
 }
 @media screen and (min-width: 721px) {
   .section-price {
-    height: 718px;
     max-width: 1280px;
     background-image: url(../img/bgprice-1280.png);
     background-image: -webkit-image-set(url(../img/bgprice-1280.png) 1x, url(../img/bgprice-1280@2x.png) 2x);
@@ -595,30 +623,64 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin-bottom: 50px;
 }
-
-.price-list {
-  width: 585px;
-  height: 240px;
-  padding: 30px 40px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
-  background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+@media screen and (max-width: 1199px) {
+  .price {
+    padding: 30px 40px;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background-image: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 
-.price-list--second {
-  background: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
-  background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+@media screen and (min-width: 1200px) {
+  .price-list {
+    background: -webkit-gradient(linear, left top, left bottom, from(#171a24), to(rgba(23, 26, 36, 0.2)));
+    background: linear-gradient(180deg, #171a24 0%, rgba(23, 26, 36, 0.2) 100%);
+    width: 585px;
+    height: 240px;
+    padding: 30px 40px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .price-list--second {
+    margin-top: 20px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .price-list--second {
+    background: -webkit-gradient(linear, left top, left bottom, from(#090b13), to(rgba(9, 11, 19, 0.2)));
+    background: linear-gradient(180deg, #090b13 0%, rgba(9, 11, 19, 0.2) 100%);
+  }
 }
 
 .price-list__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  font-size: 18px;
-  line-height: 1.67;
+  font-size: 14px;
+  line-height: 2.14;
   letter-spacing: 0.02em;
   color: #9da4bd;
+}
+@media screen and (min-width: 720px) {
+  .price-list__item {
+    font-size: 18px;
+    line-height: 1.67;
+  }
 }
 .price-list__item + .price-list__item {
   margin-top: 20px;
@@ -643,7 +705,19 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 130px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+@media screen and (min-width: 1200px) {
+  .container-advance {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 130px;
+  }
 }
 
 .advance-list {
@@ -651,10 +725,25 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
-  margin-left: 100px;
   width: 370px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+@media screen and (max-width: 719px) {
+  .advance-list {
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1199px) {
+  .advance-list {
+    -ms-flex-item-align: end;
+        align-self: flex-end;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .advance-list {
+    margin-left: 100px;
+  }
 }
 
 .advance-list__item {
@@ -689,6 +778,12 @@ img {
   vertical-align: 20px;
 }
 
+@media screen and (max-width: 1199px) {
+  .advance-content {
+    margin-bottom: 44px;
+  }
+}
+
 .advance-content__subtitle {
   margin-left: 80px;
   margin-bottom: 20px;
@@ -697,6 +792,11 @@ img {
 
 .advance-content__section-title {
   margin-bottom: 20px;
+}
+
+.advance__title {
+  margin-bottom: 0;
+  max-width: 500px;
 }
 
 .section-masters {
@@ -717,7 +817,20 @@ img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 30px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 64px;
+}
+@media screen and (min-width: 1200px) {
+  .team-list {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 30px;
+  }
 }
 
 .team-list__item {
@@ -734,6 +847,7 @@ img {
 }
 
 .team-list__foto {
+  width: 100%;
   margin-bottom: 30px;
 }
 
@@ -798,6 +912,12 @@ img {
   display: -ms-flexbox;
   display: flex;
   gap: 30px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.work-list__foto {
+  width: 100%;
 }
 
 footer {
@@ -835,21 +955,48 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media screen and (min-width: 1200px) {
+  .footer-container {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 40px;
+  }
 }
 
 .data-form {
-  width: 560px;
+  width: 100%;
+}
+@media screen and (min-width: 1200px) {
+  .data-form {
+    width: 560px;
+  }
 }
 
 .data-form__form-field {
   position: relative;
   display: inline-block;
-  width: 260px;
+  width: 100%;
   margin-bottom: 44px;
 }
-.data-form__form-field + .data-form__form-field {
-  margin-left: 30px;
+@media screen and (min-width: 720px) {
+  .data-form__form-field {
+    width: 330px;
+  }
+  .data-form__form-field + .data-form__form-field {
+    margin-left: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .data-form__form-field {
+    width: 260px;
+  }
 }
 
 .data-form__input {
@@ -929,8 +1076,15 @@ footer {
   color: white;
 }
 
-.data-location {
-  margin-left: 100px;
+@media screen and (max-width: 1199px) {
+  .data-location {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .data-location {
+    margin-left: 100px;
+  }
 }
 
 .address {
@@ -944,7 +1098,16 @@ footer {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  margin-bottom: 70px;
+}
+@media screen and (max-width: 448px) {
+  .address {
+    margin-bottom: 40px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .address {
+    margin-bottom: 70px;
+  }
 }
 
 .address__item {
