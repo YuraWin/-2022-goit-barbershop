@@ -58,18 +58,21 @@
 .hero-container {
   position: relative;
   width: 1070px;
-  height: 680px;
+  min-height: 680px;
   padding: 40px 0px 40px 40px;
-  // background: rgba(25, 28, 38, 0.2);
-  // background-image: url(../img/slider1.jpg);
-  // background-size: cover;
-}
+  background-color: rgba(25, 28, 38, 0.2);
 
-.slider {
-  top: 0;
-  left: 0;
-  position: absolute;
-  z-index: -1;
+  @media screen and (min-wdth: $tablet) {
+    height: 680px;
+  }
+
+  .slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: visible;
+  }
 }
 .header-nav {
   display: flex;
@@ -827,7 +830,7 @@ footer {
   @media screen and (max-width: calc($tablet - 1px)) {
     height: 100%;
   }
-  @media screen and (min-width: $destop) {
+  @media screen and (min-width: $desktop) {
     align-items: center;
   }
 }
