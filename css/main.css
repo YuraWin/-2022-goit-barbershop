@@ -924,26 +924,13 @@ footer {
   background-color: #191c26;
 }
 
-.footer-section {
+.footer-background {
+  padding: 0;
   background-size: contain;
   background-repeat: no-repeat;
 }
-@media screen and (max-width: 719px) {
-  .footer-section {
-    background-image: url(../img/bgfooter-480.png);
-    background-image: -webkit-image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
-    background-image: image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
-  }
-}
-@media screen and (min-width: 720px) {
-  .footer-section {
-    background-image: url(../img/bgfooter-768.png);
-    background-image: -webkit-image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
-    background-image: image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
-  }
-}
 @media screen and (min-width: 1200px) {
-  .footer-section {
+  .footer-background {
     background-position: 51vw;
     background-image: url(../img/bgfooter-625.png);
     background-image: -webkit-image-set(url(../img/bgfooter-625.png) 1x, url(../img/bgfooter-625@2x.png) 2x);
@@ -959,9 +946,18 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  padding: 0;
+}
+@media screen and (min-width: 448px) {
+  .footer-container {
+    width: 100%;
+  }
 }
 @media screen and (min-width: 1200px) {
   .footer-container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -970,14 +966,34 @@ footer {
   }
 }
 
-.data-form {
-  width: 100%;
-  margin-bottom: 168px;
+.footer-section:last-child {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (max-width: 719px) {
+  .footer-section:last-child {
+    background-image: url(../img/bgfooter-480.png);
+    background-image: -webkit-image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
+    background-image: image-set(url(../img/bgfooter-480.png) 1x, url(../img/bgfooter-480@2x.png) 2x);
+  }
 }
 @media screen and (min-width: 720px) and (max-width: 1199px) {
-  .data-form {
-    margin-bottom: 200px;
+  .footer-section:last-child {
+    background-image: url(../img/bgfooter-768.png);
+    background-image: -webkit-image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
+    background-image: image-set(url(../img/bgfooter-768.png) 1x, url(../img/bgfooter-768@2x.png) 2x);
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-section__container {
+    width: 100%;
+    padding: 0;
+  }
+}
+
+.data-form {
+  width: 100%;
 }
 @media screen and (min-width: 1200px) {
   .data-form {
@@ -1099,6 +1115,15 @@ footer {
   }
 }
 
+@media screen and (min-width: 720px) and (max-width: 1199px) {
+  .data-location__block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 110px;
+  }
+}
+
 .address {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1111,7 +1136,7 @@ footer {
       -ms-flex-align: start;
           align-items: flex-start;
 }
-@media screen and (max-width: 448px) {
+@media screen and (max-width: 719px) {
   .address {
     margin-bottom: 40px;
   }
@@ -1140,6 +1165,12 @@ footer {
   margin-top: 20px;
 }
 
+@media screen and (min-width: 720px) {
+  .address__item:first-child {
+    width: 200px;
+  }
+}
+
 .address__item:last-child {
   text-decoration: underline;
 }
@@ -1153,7 +1184,7 @@ footer {
   --color1: white;
 }
 
-.address__subtitle {
+.work-time__subtitle {
   position: relative;
   display: inline-block;
   margin-left: 80px;
@@ -1171,6 +1202,12 @@ footer {
 .bottom-line {
   background-color: #fff;
   padding: 56px 0;
+}
+@media screen and (max-width: 719px) {
+  .bottom-line {
+    padding: 44px 0;
+    height: 138px;
+  }
 }
 
 .bottom-line__container {
@@ -1191,6 +1228,8 @@ footer {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #9da4bd;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .footer-social-list__item:first-child::before {
@@ -1198,4 +1237,6 @@ footer {
   left: -100px;
   width: 60px;
   height: 1px;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
 }/*# sourceMappingURL=main.css.map */

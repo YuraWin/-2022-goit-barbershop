@@ -573,25 +573,11 @@
 footer {
   background-color: $secondary-bg-color;
 }
-.footer-section {
-  // background-image: url(../img/bgfooter-625.png);
+.footer-background {
+  padding: 0;
   background-size: contain;
   background-repeat: no-repeat;
-  @media screen and (max-width: 719px) {
-    // max-width: 480px;
-    background-image: url(../img/bgfooter-480.png);
-    background-image: image-set(
-      url(../img/bgfooter-480.png) 1x,
-      url(../img/bgfooter-480@2x.png) 2x
-    );
-  }
-  @media screen and (min-width: 720px) {
-    background-image: url(../img/bgfooter-768.png);
-    background-image: image-set(
-      url(../img/bgfooter-768.png) 1x,
-      url(../img/bgfooter-768@2x.png) 2x
-    );
-  }
+
   @media screen and (min-width: 1200px) {
     background-position: 51vw;
     background-image: url(../img/bgfooter-625.png);
@@ -601,23 +587,52 @@ footer {
     );
   }
 }
-//****************FOOTER*******************
-//****************Online entry*************
 .footer-container {
   display: flex;
   flex-direction: column;
+  padding: 0;
+
+  @media screen and (min-width: $mobile) {
+    width: 100%;
+  }
+
   @media screen and (min-width: $desktop) {
+    width: $desktop;
+    margin: 0 auto;
+    padding: 0 15px;
     flex-direction: row;
     gap: 40px;
   }
 }
+.footer-section:last-child {
+  background-size: cover;
+  background-repeat: no-repeat;
+  @media screen and (max-width: 719px) {
+    // max-width: 480px;
+    background-image: url(../img/bgfooter-480.png);
+    background-image: image-set(
+      url(../img/bgfooter-480.png) 1x,
+      url(../img/bgfooter-480@2x.png) 2x
+    );
+  }
+  @media screen and (min-width: 720px) and (max-width: calc($desktop - 1px)) {
+    background-image: url(../img/bgfooter-768.png);
+    background-image: image-set(
+      url(../img/bgfooter-768.png) 1x,
+      url(../img/bgfooter-768@2x.png) 2x
+    );
+  }
+}
+.footer-section__container {
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    padding: 0;
+  }
+}
+//****************Online entry*************
 .data-form {
   width: 100%;
-  margin-bottom: 168px;
 
-  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
-    margin-bottom: 200px;
-  }
   @media screen and (min-width: $desktop) {
     width: 560px;
   }
@@ -726,12 +741,18 @@ footer {
     margin-left: 100px;
   }
 }
+.data-location__block {
+  @media screen and (min-width: $tablet) and (max-width: calc($desktop - 1px)) {
+    display: flex;
+    gap: 110px;
+  }
+}
 .address {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: calc($tablet - 1px)) {
     margin-bottom: 40px;
   }
   @media screen and (min-width: $desktop) {
@@ -758,6 +779,11 @@ footer {
     margin-top: 20px;
   }
 }
+.address__item:first-child {
+  @media screen and (min-width: $tablet) {
+    width: 200px;
+  }
+}
 .address__item:last-child {
   text-decoration: underline;
 }
@@ -772,7 +798,7 @@ footer {
   }
 }
 
-.address__subtitle {
+.work-time__subtitle {
   position: relative;
   display: inline-block;
   margin-left: 80px;
@@ -789,11 +815,21 @@ footer {
 .bottom-line {
   background-color: #fff;
   padding: 56px 0;
+
+  @media screen and (max-width: calc($tablet - 1px)) {
+    padding: 44px 0;
+    height: 138px;
+  }
 }
 .bottom-line__container {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    height: 100%;
+  }
+  @media screen and (min-width: $destop) {
+    align-items: center;
+  }
 }
 .copyright {
   font-weight: 600;
@@ -801,6 +837,7 @@ footer {
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: $third-color-text;
+  align-self: flex-end;
 }
 
 .footer-social-list__item:first-child::before {
@@ -808,4 +845,5 @@ footer {
   left: -100px;
   width: 60px;
   height: 1px;
+  align-self: flex-start;
 }

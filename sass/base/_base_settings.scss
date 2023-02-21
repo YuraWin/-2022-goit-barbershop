@@ -44,7 +44,6 @@ img {
 .container {
   margin: 0px auto;
   padding: 0 15px;
-  // max-width: 100%;
   @media screen and (min-width: $mobile) {
     width: $mobile;
   }
