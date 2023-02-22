@@ -12,33 +12,23 @@
     />
   </head>
   <body>
-    <header>
-      <div class="container header">
+    <header class="section-header">
+      <div class="container header-container tomline">
         <!-- ************Left-link************* -->
-        <div class="social-container">
-          <img class="logo" src="./img/Logo.svg" alt="Логотип" width="69" height="56" />
-          <ul class="social-list social-list--vertical">
-            <li class="social-list__item social-list__item--vertical">
-              <a
-                class="social-list__link social-list__link--vertical"
-                href="./"
-                aria-label="Ссилка на Instagram"
-                >Instagram</a
-              >
+        <div class="social-block">
+          <ul class="social-list">
+            <li class="social-list__item">
+              <a class="social-list__link" href="./" aria-label="Ссилка на Instagram">Instagram</a>
             </li>
-            <li class="social-list__item social-list__item--vertical">
-              <a
-                class="social-list__link social-list__link--vertical"
-                href="./"
-                aria-label="Ссилка на Youtube"
-                >Youtube</a
-              >
+            <li class="social-list__item">
+              <a class="social-list__link" href="./" aria-label="Ссилка на Youtube">Youtube</a>
             </li>
           </ul>
+          <img class="logo" src="./img/Logo.svg" alt="Логотип" width="69" height="56" />
         </div>
         <!-- ************Hero-container********* -->
-        <div class="hero-container">
-          <!-- <picture>
+
+        <!-- <picture>
             <source
               srcset="./img/slider1-1125.jpg 1125w, ./img/slider1-1125@2x.jpg 2250w"
               media="(min-width:720px)"
@@ -57,30 +47,29 @@
             <img class="slider" src="./img/slider1-1125.jpg" alt="BarberShop" />
           </picture> -->
 
-          <div class="header-nav">
-            <nav>
-              <ul class="nav-list">
-                <li><a class="nav-list__link" href="./">Про нас</a></li>
-                <li><a class="nav-list__link" href="./">Послуги та ціни</a></li>
-                <li><a class="nav-list__link" href="./">Майстри</a></li>
-                <li><a class="nav-list__link" href="./">Контакти</a></li>
-              </ul>
-            </nav>
-            <div class="contacts">
-              <a class="header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
-              <a class="button" href="#online-entry">онлайн-запис</a>
-            </div>
+        <div class="header-nav">
+          <nav>
+            <ul class="nav-list">
+              <li><a class="nav-list__link" href="./">Про нас</a></li>
+              <li><a class="nav-list__link" href="./">Послуги та ціни</a></li>
+              <li><a class="nav-list__link" href="./">Майстри</a></li>
+              <li><a class="nav-list__link" href="./">Контакти</a></li>
+            </ul>
+          </nav>
+          <div class="contacts">
+            <a class="header__tel" href="tel:+380441111111">+38 044 111 11 11</a>
+            <a class="button" href="#online-entry">онлайн-запис</a>
           </div>
-          <p class="subtitle subtitle--grey header__subtitle">A hair salon for men in Kyiv</p>
-          <h1 class="header__hero">BarberShop</h1>
-          <p class="header__slogan">
-            We are experts in trendy men's haircuts.<br />
-            We work quickly, carefully, and tastefully.
-          </p>
-          <div class="header-buttons">
-            <button class="slider__button" type="button">Назад</button>
-            <button class="slider__button slider__button--right" type="button">Вперед</button>
-          </div>
+        </div>
+        <p class="subtitle subtitle--grey header__subtitle">A hair salon for men in Kyiv</p>
+        <h1 class="header__hero">BarberShop</h1>
+        <p class="header__slogan">
+          We are experts in trendy men's haircuts.<br />
+          We work quickly, carefully, and tastefully.
+        </p>
+        <div class="header-buttons">
+          <button class="slider__button" type="button">Назад</button>
+          <button class="slider__button slider__button--right" type="button">Вперед</button>
         </div>
       </div>
     </header>
