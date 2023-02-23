@@ -1,6 +1,6 @@
 /* Header*/
 .section-header {
-  height: 680px;
+  height: 580px;
   background-color: $secondary-color-text;
   padding: 40px 0;
 
@@ -13,6 +13,7 @@
     background-image: image-set(url(../img/slider1-480.jpg) 1x, url(../img/slider1-480@2x.jpg) 2x);
   }
   @media screen and (min-width: $tablet) {
+    height: 680px;
     background-image: url(../img/slider1-609.jpg);
     background-image: image-set(url(../img/slider1-609.jpg) 1x, url(../img/slider1-609@2x.jpg) 2x);
   }
@@ -42,12 +43,18 @@
   transform-origin: bottom left;
   transform: rotate(-90deg);
 
-  @media screen and (max-width: $mobile) {
+  @media screen and (max-width: calc($tablet - 1px)) {
     display: none;
   }
 }
 .logo {
   rotate: 90deg;
+}
+.logo--mobile {
+  rotate: 0deg;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
 .social-list {
   position: relative;
@@ -203,12 +210,16 @@
 
 .header__subtitle {
   position: relative;
-  margin-left: 280px;
   margin-bottom: 20px;
+  margin-left: 80px;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 280px;
+  }
 }
 
 .header__hero {
-  margin-left: 200px;
+  // margin-left: 200px;
   margin-bottom: 20px;
   font-family: 'Raleway';
   font-style: normal;
@@ -218,19 +229,26 @@
   letter-spacing: 0.05em;
   color: #ffffff;
 
+  @media screen and (min-width: $tablet) {
+    margin-left: 200px;
+  }
+
   @media screen and (min-width: $desktop) {
     font-size: 72px;
   }
 }
 
 .header__slogan {
-  margin-left: 200px;
   margin-bottom: 142px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: $third-color-text;
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 200px;
+  }
   @media screen and (min-width: $desktop) {
     font-size: 18px;
   }
