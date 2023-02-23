@@ -222,10 +222,17 @@ img {
   padding: 40px 0;
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center;
+}
+@media screen and (max-width: 719px) {
+  .section-header {
+    background-image: url(../img/slider1-480.jpg);
+    background-image: -webkit-image-set(url(../img/slider1-480.jpg) 1x, url(../img/slider1-480@2x.jpg) 2x);
+    background-image: image-set(url(../img/slider1-480.jpg) 1x, url(../img/slider1-480@2x.jpg) 2x);
+  }
 }
 @media screen and (min-width: 720px) {
   .section-header {
-    background-position: center;
     background-image: url(../img/slider1-609.jpg);
     background-image: -webkit-image-set(url(../img/slider1-609.jpg) 1x, url(../img/slider1-609@2x.jpg) 2x);
     background-image: image-set(url(../img/slider1-609.jpg) 1x, url(../img/slider1-609@2x.jpg) 2x);
@@ -233,7 +240,6 @@ img {
 }
 @media screen and (min-width: 1200px) {
   .section-header {
-    background-position: center;
     background-image: url(../img/slider1-1125.jpg);
     background-image: -webkit-image-set(url(../img/slider1-1125.jpg) 1x, url(../img/slider1-1125@2x.jpg) 2x);
     background-image: image-set(url(../img/slider1-1125.jpg) 1x, url(../img/slider1-1125@2x.jpg) 2x);
@@ -265,6 +271,11 @@ img {
           transform-origin: bottom left;
   -webkit-transform: rotate(-90deg);
           transform: rotate(-90deg);
+}
+@media screen and (max-width: 448px) {
+  .social-block {
+    display: none;
+  }
 }
 
 .logo {
@@ -317,15 +328,29 @@ img {
           align-items: baseline;
   margin: 0 0 192px 140px;
 }
+@media screen and (max-width: 719px) {
+  .header-nav {
+    display: none;
+  }
+}
 
 .nav-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  gap: 40px;
+  gap: 24px;
+}
+@media screen and (min-width: 1200px) {
+  .nav-list {
+    gap: 40px;
+  }
 }
 
 .nav-list__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
   color: white;
   -webkit-transition: color 200ms;
   transition: color 200ms;
@@ -347,6 +372,9 @@ img {
   -webkit-box-direction: reverse;
       -ms-flex-direction: column-reverse;
           flex-direction: column-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (min-width: 1200px) {
   .contacts {
@@ -359,6 +387,10 @@ img {
 }
 
 .header__tel {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.1em;
   color: white;
   -webkit-transition: color 200ms;
   transition: color 200ms;
