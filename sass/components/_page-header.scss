@@ -9,6 +9,9 @@
   background-position: center;
 
   @media screen and (max-width: calc($tablet - 1px)) {
+    max-width: 480px;
+    margin: 0 auto;
+    background-size: cover;
     background-image: url(../img/slider1-480.jpg);
     background-image: image-set(url(../img/slider1-480.jpg) 1x, url(../img/slider1-480@2x.jpg) 2x);
   }
@@ -50,8 +53,9 @@
 .logo {
   rotate: 90deg;
 }
-.logo--mobile {
-  rotate: 0deg;
+.logo-mobile {
+  margin-bottom: 112px;
+  fill: white;
   @media screen and (min-width: $tablet) {
     display: none;
   }
@@ -89,6 +93,51 @@
   &:focus {
     color: $accent-color;
   }
+}
+
+.menu-button {
+  position: absolute;
+  top: 28px;
+  right: 40px;
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: background-color 300ms;
+
+  &--cross {
+    background-color: transparent;
+  }
+}
+.menu-button:before {
+  position: absolute;
+  top: -8px;
+  content: ' ';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: rotate 300ms, background-color 300ms;
+}
+.menu-button:after {
+  position: absolute;
+  top: 8px;
+  content: ' ';
+  display: inline-block;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  transition: rotate 300ms background-color 300ms;
+}
+.menu-button--cross:before {
+  rotate: (45deg);
+  top: 0;
+  background-color: $secondary-color-text;
+}
+.menu-button--cross:after {
+  rotate: (-45deg);
+  top: 0;
+  background-color: $secondary-color-text;
 }
 
 .header-nav {
@@ -239,24 +288,29 @@
 }
 
 .header__slogan {
-  margin-bottom: 142px;
   font-weight: 400;
   font-size: 16px;
   line-height: 1.67;
   letter-spacing: 0.02em;
   color: $third-color-text;
-
+  max-width: 306px;
   @media screen and (min-width: $tablet) {
+    margin-bottom: 142px;
     margin-left: 200px;
+    max-width: 355px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 18px;
+    max-width: 486px;
   }
 }
 .header-buttons {
   display: flex;
   justify-content: end;
   gap: 26px;
+  @media screen and (max-width: calc($tablet - 1px)) {
+    display: none;
+  }
 }
 
 .slider__button {
