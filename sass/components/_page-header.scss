@@ -1,7 +1,7 @@
 /* Header*/
 .section-header {
   height: 580px;
-  background-color: $secondary-color-text;
+  // background-color: $secondary-color-text;
   padding: 40px 0;
 
   background-size: contain;
@@ -33,14 +33,14 @@
 }
 .social-block {
   position: absolute;
-  bottom: -40px;
+  bottom: -42px;
   left: 115px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-right: 32px;
 
-  width: 680px;
+  width: 681px;
   height: 115px;
   background-color: white;
   transform-origin: bottom left;

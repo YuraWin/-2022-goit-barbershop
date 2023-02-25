@@ -218,7 +218,6 @@ img {
 /* Header*/
 .section-header {
   height: 580px;
-  background-color: #303030;
   padding: 40px 0;
   background-size: contain;
   background-repeat: no-repeat;
@@ -256,7 +255,7 @@ img {
 
 .social-block {
   position: absolute;
-  bottom: -40px;
+  bottom: -42px;
   left: 115px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -268,7 +267,7 @@ img {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding-right: 32px;
-  width: 680px;
+  width: 681px;
   height: 115px;
   background-color: white;
   -webkit-transform-origin: bottom left;
